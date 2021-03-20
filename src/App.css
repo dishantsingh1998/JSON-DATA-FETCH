@@ -1,38 +1,70 @@
-.App {
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+.card {
+
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  height: 4rem;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: rgb(0, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  color: pink;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .topnav input[type=text] {
+    border: 1px solid rgb(204, 204, 204);
   }
 }
